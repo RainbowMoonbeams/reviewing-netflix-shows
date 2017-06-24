@@ -2,13 +2,14 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 	<title>Meaghan's Reviews</title>
+	<link rel="stylesheet" type="text/css" href="netflix-reviews.css"></link>
 </head>
 <body>
  
  <h1>All Meaghan's Netflix Shows Reviews:</h1>
 
 <div th:each="reviews: ${reviewsAsCollection}">
-	<a th:href="@{/singleReview(id=${reviews.id})}" th:text="${reviews.getTitle()}"></a>
+	<a th:href="@{/individualshows(id=${reviews.id})}" th:text="${reviews.getTitle()}"></a>
 	<p th:text="${reviews.getCategory()}"></p>
 	<p th:text="${reviews.getYear()}"></p>
 	<p th:text="${reviews.getContent()}"></p>
