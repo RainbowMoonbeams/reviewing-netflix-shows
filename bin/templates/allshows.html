@@ -10,6 +10,7 @@
 
 <div th:each="reviews: ${reviewsAsCollection}">
 	<a th:href="@{/individualshows(id=${reviews.id})}" th:text="${reviews.getTitle()}"></a>
+	<img th:src="${reviews.getImageUrl()}"/>
 	<p th:text="${reviews.getCategory()}"></p>
 	<p th:text="${reviews.getYear()}"></p>
 	<p th:text="${reviews.getContent()}"></p>
