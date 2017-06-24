@@ -2,19 +2,18 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>Meaghan's Reviews</title>
-    <link rel="stylesheet" type="text/css" href="netflix-reviews.css"></link>
+    <link rel="stylesheet" type="text/css" href="/netflix-reviews.css"></link>
 </head>
 <body>
 
 <h1>Individual Netflix Shows Reviews:</h1>
 
-<div>
-	<p th:text="${singleReview.title}"></p>
-	<img th:src="${singleReview.getImageUrl()}"/>
-	<p th:text="${singleReview.getCategory()}"></p>
-	<p th:text="${singleReview.getYear()}"></p>
-	<p th:text="${singleReview.getContent()}"></p>
-	<p th:text="${singleReview.getMyReview()}"></p>
+<div class="block-of-info">
+	<img th:src="${singleReview.getImageUrl()}" class="picture"/>
+	<p th:text="${singleReview.getCategory()}" class="category"></p>
+	<p th:text="${singleReview.getYear()}" class="year"></p>
+	<p th:text="${singleReview.getContent()}" class="content"></p>
+	<p th:text="${singleReview.getMyReview()}" class="review"></p>
 </div>
 </body>
 </html>
