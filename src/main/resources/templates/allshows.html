@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>Meaghan's Reviews</title>
+</head>
+<body>
+ 
+ <h1>Meaghan's Netflix Shows Reviews:</h1>
+
+<div th:text="'Raw: ' + ${reviewsAsCollection}"/>
+	<p th:text="${reviews.getTitle}"/>
+	<p th:text="${reviews.getCategory()}"/>
+	<p th:text="${reviews.getYear()}"/>
+	<p th:text="${reviews.getContent}"/>
+	<p th:text="${reviews.getMyReview()}"/>
+</div>
+
+</body>
+</html>

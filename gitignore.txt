@@ -1,0 +1,30 @@
+package hello;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+@Controller
+public class GreetingController {
+
+    @RequestMapping("/greeting")
+    public String greeting(@RequestParam(value="name", required=false, defaultValue="World") String name, Model model) {
+        model.addAttribute("name", name);
+        return "greeting";
+    }
+    
+    //we can do it without defaults for a parameter
+    // the parameter will be *required*
+    @RequestMapping("/greetAgain")
+    public String greetAgain(@RequestParam(value="name") String name, Model model) {
+        model.addAttribute("name", name);
+        return "greeting";
+    }
+    
+    // we can do it without the model
+    @RequestMapping("/noModel")
+    public String doFoo() {
+    	return "foo";
+    }
+}
