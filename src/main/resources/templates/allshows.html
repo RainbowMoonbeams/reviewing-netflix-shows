@@ -1,20 +1,23 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-	<title>Meaghan's Reviews</title>
-	<link rel="stylesheet" type="text/css" href="/netflix-reviews.css"></link>
+<title>Meaghan's Reviews</title>
+<link rel="stylesheet" type="text/css" href="/netflix-reviews.css"></link>
+<link href="https://fonts.googleapis.com/css?family=Architects+Daughter|Roboto"	rel="stylesheet"></link>
+
 </head>
 <body>
- 
- <h1>All Meaghan's Netflix Shows Reviews:</h1>
-
-<div th:each="reviews: ${reviewsAsCollection}" class="block-of-info">
-	<a th:href="@{/individualshows(id=${reviews.id})}" th:text="${reviews.getTitle()}"></a>
-	<img th:src="${reviews.getImageUrl()}" class="picture"/>
-	<p th:text="${reviews.getCategory()}" class="category"></p>
-	<p th:text="${reviews.getYear()}" class="year"></p>
-	<p th:text="${reviews.getContent()}" class="content"></p>
-	<p th:text="${reviews.getMyReview()}" class="review"></p>
-</div>
+<header>
+	<h1>All Meaghan's Netflix Shows Reviews:</h1>
+</header>
+	<div th:each="reviews: ${reviewsAsCollection}" class="block-of-info">
+		<a th:href="@{/individualshows(id=${reviews.id})}"
+			th:text="${reviews.getTitle()}"></a> <img
+			th:src="${reviews.getImageUrl()}" class="picture" />
+		<p th:text="${reviews.getCategory()}" class="category"></p>
+		<p th:text="${reviews.getYear()}" class="year"></p>
+		<p th:text="${reviews.getContent()}" class="content"></p>
+		<p th:text="${reviews.getMyReview()}" class="review"></p>
+	</div>
 </body>
 </html>

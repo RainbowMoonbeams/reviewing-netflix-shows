@@ -3,13 +3,15 @@
 <head>
     <title>Meaghan's Reviews</title>
     <link rel="stylesheet" type="text/css" href="/netflix-reviews.css"></link>
+    <link href="https://fonts.googleapis.com/css?family=Architects+Daughter|Roboto" rel="stylesheet"></link>
 </head>
 <body>
-
+<header>
 <h1>Individual Netflix Shows Reviews:</h1>
+</header>
 
 <div class="block-of-info">
-	<img th:src="${singleReview.getImageUrl()}" class="picture"/>
+	<img th:src="${singleReview.getImageUrl()}" th:alt="'Photo for ' + ${singleReview.getTitle()}" class="picture"/>
 	<p th:text="${singleReview.getCategory()}" class="category"></p>
 	<p th:text="${singleReview.getYear()}" class="year"></p>
 	<p th:text="${singleReview.getContent()}" class="content"></p>

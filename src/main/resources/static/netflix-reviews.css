@@ -2,6 +2,10 @@ body {
 	background-color: green;
 }
 
-.block-of-info {
-	
+h1 {
+	font-family: 'Architects Daughter', cursive;
+}
+.category, .year {
+
+	font-family: 'Roboto', sans-serif;
 }
