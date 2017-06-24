@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class ReviewController extends ReviewRepositoryComponent {
 	
 	@Resource
-	private ReviewRepositoryComponent reviewRep;
+	private ReviewRepositoryComponent reviewRep = new ReviewRepositoryComponent();
 
 	@RequestMapping("/netflixtvshows")
 	public String fetchReviews(Model model) {
@@ -19,7 +19,7 @@ public class ReviewController extends ReviewRepositoryComponent {
 		return "allshows";
 	}
 	
-	@RequestMapping("/individualshows")
+	@RequestMapping(value = "/individualshows")
 	public String greetAgain(@RequestParam("id") long id, Model model) {
 		model.addAttribute("singleReview", reviewRep.findOne(id));
 		return "individual";

@@ -5,15 +5,14 @@
 </head>
 <body>
  
- <h1>Meaghan's Netflix Shows Reviews:</h1>
+ <h1>All Meaghan's Netflix Shows Reviews:</h1>
 
-<div th:text="'Raw: ' + ${reviewsAsCollection}"/>
-	<p th:text="${reviews.getTitle}"/>
-	<p th:text="${reviews.getCategory()}"/>
-	<p th:text="${reviews.getYear()}"/>
-	<p th:text="${reviews.getContent}"/>
-	<p th:text="${reviews.getMyReview()}"/>
+<div th:each="reviews: ${reviewsAsCollection}">
+	<a th:href="@{/singleReview(id=${reviews.id})}" th:text="${reviews.getTitle()}"></a>
+	<p th:text="${reviews.getCategory()}"></p>
+	<p th:text="${reviews.getYear()}"></p>
+	<p th:text="${reviews.getContent()}"></p>
+	<p th:text="${reviews.getMyReview()}"></p>
 </div>
-
 </body>
 </html>
