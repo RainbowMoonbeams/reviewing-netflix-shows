@@ -6,17 +6,20 @@
 <link href="https://fonts.googleapis.com/css?family=Architects+Daughter|Roboto"	rel="stylesheet"></link>
 
 </head>
-<body>
+<body class="the-body">
 <header>
-	<h1>All Meaghan's Netflix Shows Reviews:</h1>
+	<h1>Netflix Shows Reviews:</h1>
 </header>
-	<div th:each="reviews: ${reviewsAsCollection}" class="block-of-info">
+	<div th:each="reviews: ${reviewsAsCollection}" class="title-content">
 		<h2><a th:href="@{/individualshows(id=${reviews.id})}"
 			th:text="${reviews.getTitle()}"></a></h2>
-		<p th:text="${reviews.getCategory()}" class="category"></p>
-		<p th:text="${reviews.getYear()}" class="year"></p>
 		<p th:text="${reviews.getContent()}" class="content"></p>
-		<p th:text="${reviews.getMyReview()}" class="review"></p>
 	</div>
 </body>
+<footer>
+	<h5>All views and opinions are my own.</h5>
+	<h5>Site not endorsed by Netflix, though I'm not above selling my soul to watch Netflix Shows and write reviews about them if they want to pay me for it.</h5>
+	<h5>Images do not belong to me.</h5>
+	<h5>&copy;2017 Meaghan Rea</h5>
+</footer>
 </html>

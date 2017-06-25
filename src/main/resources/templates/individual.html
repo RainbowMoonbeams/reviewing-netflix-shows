@@ -1,21 +1,29 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Meaghan's Reviews</title>
-    <link rel="stylesheet" type="text/css" href="/netflix-reviews.css"></link>
-    <link href="https://fonts.googleapis.com/css?family=Architects+Daughter|Roboto" rel="stylesheet"></link>
+	<title>Meaghan's Reviews</title>
+	<link rel="stylesheet" type="text/css" href="/netflix-reviews.css"></link>
+	<link href="https://fonts.googleapis.com/css?family=Architects+Daughter|Roboto" rel="stylesheet"></link>
 </head>
 <body>
-<header>
-<h1>Individual Netflix Shows Reviews:</h1>
-</header>
+	<header class="top-of-individual-page">
+		<h1>Netflix Shows Reviews:</h1>
+		<h1><a href="http://localhost:8080/netflixtvshows">View all titles</a></h1>
+	</header>
 
-<div class="block-of-info">
-	<img th:src="${singleReview.getImageUrl()}" th:alt="'Photo for ' + ${singleReview.getTitle()}" class="picture"/>
-	<p th:text="${singleReview.getCategory()}" class="category"></p>
-	<p th:text="${singleReview.getYear()}" class="year"></p>
-	<p th:text="${singleReview.getContent()}" class="content"></p>
-	<p th:text="${singleReview.getMyReview()}" class="review"></p>
+	<div class="block-of-info">
+		<img th:src="${singleReview.getImageUrl()}" th:alt="'Photo for ' + ${singleReview.getTitle()}" class="picture"/>
+		<div class="category-year-review">
+		<p th:text="${singleReview.getCategory()}" class="category"></p>
+		<p th:text="${singleReview.getYear()}" class="year"></p>
+		<p th:text="${singleReview.getMyReview()}" class="review"></p>
+	</div>
 </div>
 </body>
+<footer>
+	<h5>All views and opinions are my own.</h5>
+	<h5>Site not endorsed by Netflix, though I'm not above selling my soul to watch Netflix Shows and write reviews about them if they want to pay me for it.</h5>
+	<h5>Images do not belong to me.</h5>
+	<h5>&copy;2017 Meaghan Rea</h5>
+</footer>
 </html>
