@@ -7,12 +7,13 @@
 </head>
 <body>
 	<header class="top-of-individual-page">
-		<h1>Netflix Shows Reviews:</h1>
-		<h1><a href="http://localhost:8080/netflixtvshows">View all titles</a></h1>
+		<h1 id="left-align">Netflix Shows</h1>
+		<h2 id="left-align" th:text="'- Review of ' + ${singleReview.getTitle()} + ' -'"></h2>
+		<h1 id="right-align"><a href="http://localhost:8080/netflixtvshows">View all titles</a></h1>
 	</header>
 
 	<div class="block-of-info">
-		<img th:src="${singleReview.getImageUrl()}" th:alt="'Photo for ' + ${singleReview.getTitle()}" class="picture"/>
+		<a href="http://localhost:8080/netflixtvshows"><img th:src="${singleReview.getImageUrl()}" th:alt="'Photo for ' + ${singleReview.getTitle()}" class="picture"/></a>
 		<div class="category-year-review">
 		<p th:text="${singleReview.getCategory()}" class="category"></p>
 		<p th:text="${singleReview.getYear()}" class="year"></p>
@@ -22,8 +23,9 @@
 </body>
 <footer>
 	<h5>All views and opinions are my own.</h5>
-	<h5>Site not endorsed by Netflix, though I'm not above selling my soul to watch Netflix Shows and write reviews about them if they want to pay me for it.</h5>
 	<h5>Images do not belong to me.</h5>
+	<h5>Site not endorsed by Netflix...</h5>
+	<h6>though I'm not above selling my soul to watch Netflix Shows and write reviews about them if they want to pay me for it.</h6>
 	<h5>&copy;2017 Meaghan Rea</h5>
 </footer>
 </html>

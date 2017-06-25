@@ -1,32 +1,36 @@
 a:link {
 	color: #f19f4d;
 }
+a:visited {
+	color: #4484ce;	
+}
 a:hover {
+	color: #4484ce;
+}
+a:active {
 	color: #f9cf00;
 }
-a:visited {
-	color: #f9cf00;	
-}
 body {
-	background-color: #4484ce;
+	background-color: #f19f4d;
 	margin: auto;
 	width: 60%;
 	padding: auto;
 }
 .block-of-info, .title-content {
-	border: 10px solid #f19f4d;
+	border: 10px solid #4484ce;
 	padding: 30px;
 	background-color: #d9d9d9;
 }
-h1, h2, h5 {
+h1, h2 {
 	font-family: 'Architects Daughter', cursive;
 }
-.category, .year, .content, .review {
+.category, .year, .content, .review, h5, h6 {
 	font-family: 'Roboto', sans-serif;
 }
 .picture {
 	display: flex;
 	justify-content: flex-start;
+	border: 2px solid #f9cf00;
 }
 .block-of-info {
 	display: flex;
@@ -34,22 +38,22 @@ h1, h2, h5 {
 	justify-content: space-around;
 	align-content: center;
 	align-items: center;
-	
 }
 .picture {
 	margin: 30px;
 }
-.block-of-info, .title-content {
+header, .block-of-info, .title-content {
 	margin-bottom: 50px;
 }
-footer {
-	background-color: #f19f4d;
+header, footer {
+	background-color: #f9cf00;
+	border: 10px solid #4484ce;
 	padding: 20px;
 	padding-left: 20px;
 	padding-right: 20px;
 	text-align: center;
 }
-.top-of-individual-page {
+#left-align #right-align {
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: space-between;
