@@ -2,10 +2,10 @@ body {
 	background-color: green;
 }
 
-h1 {
+h1, h2 {
 	font-family: 'Architects Daughter', cursive;
 }
-.category, .year, .content {
+.category, .year, .content, .review {
 
 	font-family: 'Roboto', sans-serif;
 }

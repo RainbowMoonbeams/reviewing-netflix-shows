@@ -11,9 +11,8 @@
 	<h1>All Meaghan's Netflix Shows Reviews:</h1>
 </header>
 	<div th:each="reviews: ${reviewsAsCollection}" class="block-of-info">
-		<a th:href="@{/individualshows(id=${reviews.id})}"
-			th:text="${reviews.getTitle()}"></a> <img
-			th:src="${reviews.getImageUrl()}" class="picture" />
+		<h2><a th:href="@{/individualshows(id=${reviews.id})}"
+			th:text="${reviews.getTitle()}"></a></h2>
 		<p th:text="${reviews.getCategory()}" class="category"></p>
 		<p th:text="${reviews.getYear()}" class="year"></p>
 		<p th:text="${reviews.getContent()}" class="content"></p>
