@@ -3,13 +3,13 @@
 <head>
 	<title>Meaghan's Reviews</title>
 	<link rel="stylesheet" type="text/css" href="/netflix-reviews.css"></link>
-	<link href="https://fonts.googleapis.com/css?family=Architects+Daughter|Roboto" rel="stylesheet"></link>
+	<link href="https://fonts.googleapis.com/css?family=Arimo|Roboto" rel="stylesheet"></link>
 </head>
 <body>
 	<header class="top-of-individual-page">
 		<h1 id="left-align">Netflix Shows</h1>
 		<h2 id="left-align" th:text="'- Review of ' + ${singleReview.getTitle()} + ' -'"></h2>
-		<h1 id="right-align"><a href="http://localhost:8080/netflixtvshows">View all titles</a></h1>
+		<h3 id="right-align"><a href="http://localhost:8080/netflixtvshows">Back to all titles</a></h3>
 	</header>
 
 	<div class="block-of-info">
