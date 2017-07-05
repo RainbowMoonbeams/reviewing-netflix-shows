@@ -20,64 +20,64 @@ public class Review {
 		this.myReview = myReview;
 	}
 
-	public void setId(long id) {
-		this.id = id;
-	}
-
 	public long getId() {
 		return id;
-	}
-
-	public void setTitle(String title) {
-		this.title = title;
 	}
 
 	public String getTitle() {
 		return title;
 	}
-	
-	public void setCategory(String reviewCategory) {
-		this.category = reviewCategory;
+
+	public String getImageUrl() {
+		return imageUrl;
 	}
-	
+
 	public String getCategory() {
 		return category;
 	}
-	
-	public void setYear(int year) {
-		this.year = year;
-	}
-	
+
 	public int getYear() {
 		return year;
 	}
-	
-	public void setContent(String content) {
-		this.content = content;
-	}
-	
+
 	public String getContent() {
 		return content;
-	}
-
-	public void setMyReview(String myReview) {
-		this.myReview = myReview;
 	}
 
 	public String getMyReview() {
 		return myReview;
 	}
 
-	@Override
-	public String toString() {
-		return (title + category + imageUrl + content);
+	public void setId(long id) {
+		this.id = id;
+	}
+
+	public void setTitle(String title) {
+		this.title = title;
 	}
 
 	public void setImageUrl(String imageUrl) {
 		this.imageUrl = imageUrl;
 	}
-	
-	public String getImageUrl() {
-		return imageUrl;
+
+	public void setCategory(String category) {
+		this.category = category;
+	}
+
+	public void setYear(int year) {
+		this.year = year;
+	}
+
+	public void setContent(String content) {
+		this.content = content;
+	}
+
+	public void setMyReview(String myReview) {
+		this.myReview = myReview;
+	}
+
+	@Override
+	public String toString() {
+		return (title + category + imageUrl + content);
 	}
 }
